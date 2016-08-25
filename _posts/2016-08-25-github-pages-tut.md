@@ -1,7 +1,10 @@
 ---
-layout: page
+layout: post
 title: GitHub Pages tut
 permalink: /github-pages-tut/
+author:    locnx
+keywords:  github jekyll
+menutitle: Tech
 ---
 [version: 0.1]
 
