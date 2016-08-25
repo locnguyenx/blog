@@ -24,6 +24,7 @@ linkedin: https://vn.linkedin.com/in/loc-nguyen-xuan-83051347
 email: loc.nguyenxuan@gmail.com
 
 #Other
+analytics: 'UA-83154928-1'
 google-custom-search-cx: '008787842287427824110:bd6ovs0skhk'        #Create Custom Search Engine(CSE) with google and find this ID in the code they provide.
 
 destination: ./_site
