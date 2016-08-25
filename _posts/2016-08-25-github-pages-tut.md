@@ -3,15 +3,14 @@ layout: post
 title: GitHub Pages tut
 permalink: /github-pages-tut/
 author:    locnx
-keywords:  github jekyll
+keywords:  github pages jekyll linux bash
 menutitle: Tech
 ---
 [version: 0.1]
 
 # Quickstart
 
-- How to create GitHub site, setup Jekyll, config DNS, CNAME: [captainwhippet blog](http://captainwhippet.com/blog/2014/05/11/blog-setup-details.html)
-- [Creating and Hosting a Personal Site on GitHub](http://jmcglone.com/guides/github-pages/)
+- End-to-end guide to create GitHub site, setup Jekyll, config DNS, CNAME: [captainwhippet blog](http://captainwhippet.com/blog/2014/05/11/blog-setup-details.html)
 - start Jekyll locally with auto regeneration for update: 
 	`bundle exec jekyll s --force_polling`
 
@@ -27,22 +26,18 @@ menutitle: Tech
 # Jekyll
 
 ### Theme
-
-- [jekyllDecent from jwillmer blog](http://jwillmer.github.io/jekyllDecent/)
+- selected theme: [webjeda sidebar](https://blog.webjeda.com/jekyll-themes/sidebar/)
+- alternative, too complicated: [jekyllDecent from jwillmer blog](http://jwillmer.github.io/jekyllDecent/)
 
 ### General content building guide
-
+- [Creating and Hosting a Personal Site on GitHub](http://jmcglone.com/guides/github-pages/)
 - [Get Started With GitHub Pages (Plus Bonus Jekyll)](https://24ways.org/2013/get-started-with-github-pages/)
 
-### Windows
 
-Use alternatively 1 of following:
-- [Official installation guide](http://jekyllrb.com/docs/windows/#installation)
-- [Easily install Jekyll on Windows ](https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/)
-- [How to install Jekyll and pages-gem on Windows (x64)](http://jwillmer.de/blog/tutorial/how-to-install-jekyll-and-pages-gem-on-windows-10-x46)
--
+### Installation
 
-### Linux
+#### Linux
+
 - [Install Ruby 2.2.x on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-16-04)
 	
 	TL;DR commands:
@@ -110,12 +105,22 @@ rbenv rehash
 	- `$ gem install therubyracer`
 	- add dependency into Gemfile bundle with this line: gem "therubyracer"
 
-### Ubuntu bash on Windows 10
+#### Ubuntu bash on Windows 10
 - Install Ruby & gem as in Linux
 - Problems
 	- [UNRESOLVED]Failed to watch when run `Jekyll serve`:
 		- Issue: https://github.com/jekyll/jekyll/issues/5233
 		- Workaround: start without watching `Jekyll serve --no-watch`
 	- [Permission]
+	
+#### Windows
+
+Use alternatively 1 of following:
+- [Official installation guide](http://jekyllrb.com/docs/windows/#installation)
+- [How to install Jekyll and pages-gem on Windows (x64)](http://jwillmer.de/blog/tutorial/how-to-install-jekyll-and-pages-gem-on-windows-10-x46)
+- Problems: Jekyll is not supported for Windows officially. There's some unresolved bug, i.e with '/' in file path
+
+*Notes*: I droped this option due to it's too annoying
+	
 
 
