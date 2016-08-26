@@ -1,0 +1,21 @@
+<!-- home content used in blog/index-->
+<h1 class="page-heading">Blog</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        
+        <h2 id="post-index">
+         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        {% if post.excerpt %}
+            <p>{{ post.excerpt }}... <i><a href="{{ post.url | prepend: site.baseurl }}">[more]</a></i></p>
+            <!-- consider `| strip_html`-->
+        {% endif %}
+        
+      </li>
+    {% endfor %}
+  </ul>
+
+

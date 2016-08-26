@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Host: http://locxng.com
+Host: www.locxng.com

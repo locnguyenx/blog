@@ -33,11 +33,31 @@ table {
 <div class="page-content">
 <article id="post-page" >
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+    {% if page.tags %} • 
+      {% for tag in page.tags %}
+        #{{ tag }}
+      {% endfor %}
+    {% endif %}
+    </p>
 {{ content }}
 
 
 </article>
+
+<h3>Related Posts:</h3>
+<ul class=past>
+    {% for post in site.related_posts limit:3 %}
+      <li class="arch-list">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+      </li>
+    {% endfor %}
+  </ul>
+
 {% include share.html %}
 {% if site.disqus-shortname %}{% include disqus.html %}{% endif %}
 </div>
